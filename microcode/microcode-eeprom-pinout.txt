@@ -1,0 +1,71 @@
+inputs:
+0-3: step
+4-18: instruction
+4: zero flag
+5: carry flag
+6: negative flag
+7: overflow flag
+
+outputs:
+ 0: SetStepCounter
+ 1: Halt
+ 2: RegisterA_IN
+ 3: RegisterB_IN
+ 4: RegisterC_IN
+ 5: RegisterD_IN
+ 6: RegisterW_IN
+ 7: RegisterZ_IN
+ 8: RegisterZ_CLEAR
+ 9: ALU_F0
+10: ALU_F1
+11: ALU_F2
+12: ALU_F3
+13: ALU_F4
+14: StackPointer_IN
+15: StackPointer_COUNT_UP
+16: StackPointer_COUNT_DOWN
+17: ProgramCounter_IN
+18: ProgramCounter_COUNT_UP
+19: ProgramCounter_COUNT_DOWN
+20: RegisterX_IN
+21: RegisterX_COUNT_UP
+22: RegisterX_COUNT_DOWN
+23: RegisterY_IN
+24: RegisterY_COUNT_UP
+25: RegisterY_COUNT_DOWN
+26: AddressLatch_IN
+27: InstructionRegister_IN
+28: FlagRegister_IN
+29: FlagRegister_SELECT_BUS_~FLAGS
+30: FlagRegister_SET
+31: FlagRegister_RESET
+32: FlagRegister_A0
+33: FlagRegister_A1
+34: FlagRegister_A2
+35: DataBuffer_IN
+36:
+37-40: Step
+41-44:   0:
+         1: RegisterA_OUT
+         2: RegisterB_OUT
+         3: RegisterC_OUT
+         4: RegisterD_OUT
+         5: RegisterX_OUT_DATA
+         6: RegisterY_OUT_DATA
+         7: ProgramCounter_OUT_DATA
+         8: StackPointer_OUT_DATA
+         9: ALU_OUT
+        10: FlagRegister_OUT
+        11: DataBuffer_OUT
+        12:
+        13:
+        14:
+        15:
+45-47:   0:
+         1: ProgramCounter_OUT_ADDRESS
+         2: StackPointer_OUT_ADDRESS
+         3: RegisterX_OUT_ADDRESS
+         4: RegisterY_OUT_ADDRESS
+         5: AddressLatch_OUT_ADDRESS
+         6:
+         7:

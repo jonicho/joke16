@@ -1,0 +1,24 @@
+0: add
+    0: with carry 0
+    1: with carry
+    2: with carry 1
+    3: with carry
+1: sub
+    0: with carry 0
+    1: with carry
+    2: with carry 1
+    3: with carry
+2: shift left
+    0: 0
+    1: 1
+    2: carry
+    3: rotate
+3: shift right
+    0: 0
+    1: sign
+    2: carry
+    3: rotate
+4: and
+5: or
+6: xor
+7: not
