@@ -1,0 +1,4 @@
+~RegisterA_OUT  1 | |  2 RegisterA_IN
+~RegisterB_OUT  3 | |  4 RegisterB_IN
+~RegisterC_OUT  5 | |  6 RegisterC_IN
+~RegisterD_OUT  7 | |  8 RegisterD_IN

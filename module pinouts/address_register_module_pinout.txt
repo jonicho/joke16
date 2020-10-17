@@ -1,0 +1,14 @@
+~ProgrammCounter_COUNT_UP  1 | |  2 ~ProgrammCounter_IN
+                     N.C.  3 | |  4 ~ProgrammCounter_COUNT_DOWN
+   ~StackPointer_COUNT_UP  5 | |  6 ~StackPointer_IN
+                     N.C.  7 | |  8 ~StackPointer_COUNT_DOWN
+      ~RegisterX_COUNT_UP  9 | | 10 ~RegisterX_IN
+                     N.C. 11 | | 12 ~RegisterX_COUNT_DOWN
+      ~RegisterY_COUNT_UP 13 | | 14 ~RegisterY_IN
+                     N.C. 15 | | 16 ~RegisterY_COUNT_DOWN
+
+
+~ProgrammCounter_OUT_ADDRESS  1 | |  2 ~ProgrammCounter_OUT_DATA
+   ~StackPointer_OUT_ADDRESS  3 | |  4 ~StackPointer_OUT_DATA
+      ~RegisterX_OUT_ADDRESS  5 | |  6 ~RegisterX_OUT_DATA
+      ~RegisterY_OUT_ADDRESS  7 | |  8 ~RegisterY_OUT_DATA

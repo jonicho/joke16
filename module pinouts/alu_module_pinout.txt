@@ -1,0 +1,8 @@
+           N.C.  1 | |  2 RegisterW_IN
+RegisterZ_CLEAR  3 | |  4 RegisterZ_IN
+         ALU_F1  5 | |  6 ALU_F0
+         ALU_F3  7 | |  8 ALU_F2
+       ~ALU_OUT  9 | | 10 ALU_F4
+    OVERFLOW_IN 11 | | 12 CARRY_IN
+   OVERFLOW_OUT 13 | | 14 CARRY_OUT
+           N.C. 15 | | 16 N.C.
