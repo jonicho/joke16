@@ -351,12 +351,12 @@ $EndComp
 $Comp
 L 74xx:74LS32 U?
 U 4 1 5E91E23D
-P 7950 3050
-F 0 "U?" H 7950 3375 50  0000 C CNN
-F 1 "74LS32" H 7950 3284 50  0000 C CNN
-F 2 "" H 7950 3050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7950 3050 50  0001 C CNN
-	4    7950 3050
+P 9050 3450
+F 0 "U?" H 9050 3775 50  0000 C CNN
+F 1 "74LS32" H 9050 3684 50  0000 C CNN
+F 2 "" H 9050 3450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 9050 3450 50  0001 C CNN
+	4    9050 3450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -365,7 +365,7 @@ Wire Wire Line
 	3600 2050 6950 2050
 Wire Wire Line
 	6800 2600 6900 2600
-Text HLabel 7650 2950 0    50   Input ~ 0
+Text HLabel 8750 3350 0    50   Input ~ 0
 CARRY_IN
 Connection ~ 7000 1500
 $Comp
@@ -464,10 +464,6 @@ Wire Wire Line
 Wire Wire Line
 	6600 1300 7100 1300
 Wire Wire Line
-	8250 3050 8250 1900
-Wire Wire Line
-	8250 1900 7950 1900
-Wire Wire Line
 	7950 1900 7950 1700
 Wire Wire Line
 	9850 1250 9850 1450
@@ -502,8 +498,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7350 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 3150 7650 3450
-Wire Wire Line
 	7000 3300 7050 3300
 Wire Wire Line
 	6950 3400 7050 3400
@@ -528,4 +522,38 @@ F 3 "" H 7050 3600 50  0001 C CNN
 	1    7050 3600
 	0    -1   -1   0   
 $EndComp
+$Comp
+L 74xx:74LS86 U?
+U 3 1 5F928477
+P 8100 3550
+F 0 "U?" H 8100 3875 50  0000 C CNN
+F 1 "74LS86" H 8100 3784 50  0000 C CNN
+F 2 "" H 8100 3550 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 8100 3550 50  0001 C CNN
+	3    8100 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F92A144
+P 7800 3650
+AR Path="/5F4E51E9/5F92A144" Ref="#PWR?"  Part="1" 
+AR Path="/5E82FA95/5E834B88/5F92A144" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7800 3500 50  0001 C CNN
+F 1 "+5V" H 7815 3823 50  0000 C CNN
+F 2 "" H 7800 3650 50  0001 C CNN
+F 3 "" H 7800 3650 50  0001 C CNN
+	1    7800 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 3450 7650 3450
+Wire Wire Line
+	8400 3550 8750 3550
+Wire Wire Line
+	9350 3450 9550 3450
+Wire Wire Line
+	9550 3450 9550 1900
+Wire Wire Line
+	7950 1900 9550 1900
 $EndSCHEMATC
