@@ -1,72 +1,79 @@
-set_step = 1 << 0
-halt = 1 << 1
-ra_in = 1 << 2
-rb_in = 1 << 3
-rc_in = 1 << 4
-rd_in = 1 << 5
-rw_in = 1 << 6
-rz_in = 1 << 7
-rz_clear = 1 << 8
-alu_adc = 0 << 9 | 0b01 << 12
-alu_adc_0 = 0 << 9 | 0b00 << 12
-alu_adc_1 = 0 << 9 | 0b10 << 12
+halt = 1 << 0
+set_step = 1 << 1
+
+ra_in = 0 << 6
+rb_in = 1 << 6
+rc_in = 2 << 6
+rd_in = 3 << 6
+rx_in = 4 << 6
+ry_in = 5 << 6
+pc_in = 6 << 6
+sp_in = 7 << 6
+rw_in = 8 << 6
+rz_in = 9 << 6
+adlatch_in = 10 << 6
+ir_in = 11 << 6
+db_in = 12 << 6
+
+ra_out = 1 << 10
+rb_out = 2 << 10
+rc_out = 3 << 10
+rd_out = 4 << 10
+rx_out = 5 << 10
+ry_out = 6 << 10
+pc_out = 7 << 10
+sp_out = 8 << 10
+alu_out = 9 << 10
+flagreg_out = 10 << 10
+db_out = 11 << 10
+
+rx_out_address_bus = 1 << 14
+ry_out_address_bus = 2 << 14
+pc_out_address_bus = 3 << 14
+sp_out_address_bus = 4 << 14
+adlatch_out_a = 5 << 14
+
+rx_count_up = 1 << 17
+rx_count_down = 1 << 18
+ry_count_up = 1 << 19
+ry_count_down = 1 << 20
+pc_count_up = 1 << 21
+pc_count_down = 1 << 22
+sp_count_up = 1 << 23
+sp_count_down = 1 << 24
+
+rz_clear = 1 << 25
+
+alu_adc = 0 << 26 | 0b01 << 29
+alu_adc_0 = 0 << 26 | 0b00 << 29
+alu_adc_1 = 0 << 26 | 0b10 << 29
 alu_add = alu_adc_0
-alu_sbc = 1 << 9 | 0b01 << 12
-alu_sbc_0 = 1 << 9 | 0b00 << 12
-alu_sbc_1 = 1 << 9 | 0b10 << 12
+alu_sbc = 1 << 26 | 0b01 << 29
+alu_sbc_0 = 1 << 26 | 0b00 << 29
+alu_sbc_1 = 1 << 26 | 0b10 << 29
 alu_sub = alu_sbc_1
-alu_shl = 2 << 9 | 0b00 << 12
-alu_rolc = 2 << 9 | 0b10 << 12
-alu_rol = 2 << 9 | 0b11 << 12
-alu_shrl = 3 << 9 | 0b00 << 12
-alu_shra = 3 << 9 | 0b01 << 12
-alu_rorc = 3 << 9 | 0b10 << 12
-alu_ror = 3 << 9 | 0b11 << 12
-alu_and = 4 << 9
-alu_or = 5 << 9
-alu_xor = 6 << 9
-alu_not = 7 << 9
-sp_in = 1 << 14
-sp_count_up = 1 << 15
-sp_count_down = 1 << 16
-pc_in = 1 << 17
-pc_count_up = 1 << 18
-pc_count_down = 1 << 19
-rx_in = 1 << 20
-rx_count_up = 1 << 21
-rx_count_down = 1 << 22
-ry_in = 1 << 23
-ry_count_up = 1 << 24
-ry_count_down = 1 << 25
-adlatch_in = 1 << 26
-ir_in = 1 << 27
-flagreg_in = 1 << 28
-flagreg_sel_bus = 1 << 29
-flagreg_set = 1 << 30
-flagreg_clear = 1 << 31
-db_in = 1 << 35
-ra_out = 1 << 41
-rb_out = 2 << 41
-rc_out = 3 << 41
-rd_out = 4 << 41
-rx_out = 5 << 41
-ry_out = 6 << 41
-pc_out = 7 << 41
-sp_out = 8 << 41
-alu_out = 9 << 41
-flagreg_out = 10 << 41
-db_out = 11 << 41
-pc_out_address_bus = 1 << 45
-sp_out_address_bus = 2 << 45
-rx_out_address_bus = 3 << 45
-ry_out_address_bus = 4 << 45
-adlatch_out_a = 5 << 45
+alu_shl = 2 << 26 | 0b00 << 29
+alu_rolc = 2 << 26 | 0b10 << 29
+alu_rol = 2 << 26 | 0b11 << 29
+alu_shrl = 3 << 26 | 0b00 << 29
+alu_shra = 3 << 26 | 0b01 << 29
+alu_rorc = 3 << 26 | 0b10 << 29
+alu_ror = 3 << 26 | 0b11 << 29
+alu_and = 4 << 26
+alu_or = 5 << 26
+alu_xor = 6 << 26
+alu_not = 7 << 26
+
+flagreg_in = 1 << 31
+flagreg_sel_bus = 1 << 32
+flagreg_set = 1 << 33
+flagreg_reset = 1 << 34
 
 
 def step_bits(step):
     if step < 0 or step > 15:
         raise ValueError(step)
-    return step << 37
+    return step << 2
 
 
 def set_step_counter(step):
@@ -76,13 +83,13 @@ def set_step_counter(step):
 def set_flag(flag):
     if flag < 0 or flag > 7:
         raise ValueError(flag)
-    return flag << 32 | flagreg_set
+    return flag << 35 | flagreg_set
 
 
 def clear_flag(flag):
     if flag < 0 or flag > 7:
         raise ValueError(flag)
-    return flag << 32 | flagreg_clear
+    return flag << 35 | flagreg_reset
 
 
 next_ins_value_out = pc_out_address_bus | pc_count_up | db_out
