@@ -208,7 +208,7 @@
 
 #ruledef {
     {operation: alu_op_unary} {op: operand_noimmval} =>
-        0b1 @ 0b11010 @ operation[2:0] @ reg[4:0] @ 0b00
+        0b1 @ 0b11010 @ operation[2:0] @ op[4:0] @ 0b00
 
     {operation: alu_op_unary} [{op: u16}] =>
         0b1 @ 0b11010 @ operation[2:0] @ 0b10000 @ 0b00 @ op
