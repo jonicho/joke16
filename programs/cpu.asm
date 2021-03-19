@@ -241,19 +241,3 @@
     ret =>
         0b1 @ 0b00000 @ 0b11010 @ 0b00110 ; pop pc
 }
-
-#ruledef {
-    ; copies memory segment starting at address stored in rx to memory segment
-    ; starting at address stored at ry with length stored in length_src
-    copy up {length_src: reg} => {
-        assert(length_src < 4)
-        0b0 @ 0b00011 @ 0b1 @ length_src[1:0] @ 0b0000000
-    }
-
-    ; copies memory segment ending at address stored in rx to memory segment
-    ; ending at address stored at ry with length stored in length_src
-    copy down {length_src: reg} => {
-        assert(length_src < 4)
-        0b0 @ 0b00011 @ 0b0 @ length_src[1:0] @ 0b0000000
-    }
-}

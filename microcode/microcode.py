@@ -198,10 +198,6 @@ def controlwords_instruction(instruction):
             set_flag((instruction >> 6) & 0x7)
     elif opcode == 2:  # call
         call(src=(instruction >> 5) & 0x1f)
-    elif opcode == 3:  # copy
-        copy(length_src=(instruction >> 4) & 0x1f,
-             up=bool((instruction >> 9) & 0x1),
-             zero_flag=bool(instruction & 0x1))
     elif opcode >= 8 and opcode < 16:  # jump's
         return jump(condition=(instruction >> 9) & 0xf,
                     src=(instruction >> 4) & 0x1f,
