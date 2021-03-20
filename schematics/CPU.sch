@@ -14,60 +14,52 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 5650 2250 550  400 
+S 5650 4000 550  400 
 U 5E834B51
 F0 "RegisterA" 50
 F1 "Register.sch" 50
-F2 "IN" I L 5650 2450 50 
-F3 "~OUT" I L 5650 2550 50 
-F4 "DATA_BUS" T L 5650 2350 50 
+F2 "IN" I L 5650 4200 50 
+F3 "~OUT" I L 5650 4300 50 
+F4 "DATA_BUS" T L 5650 4100 50 
 $EndSheet
 Text Label 1600 2200 0    50   ~ 0
 ADDRESS_BUS
 $Sheet
-S 5650 3000 550  400 
+S 5650 4750 550  400 
 U 5E834B58
 F0 "RegisterB" 50
 F1 "Register.sch" 50
-F2 "IN" I L 5650 3200 50 
-F3 "~OUT" I L 5650 3300 50 
-F4 "DATA_BUS" T L 5650 3100 50 
+F2 "IN" I L 5650 4950 50 
+F3 "~OUT" I L 5650 5050 50 
+F4 "DATA_BUS" T L 5650 4850 50 
 $EndSheet
 $Sheet
-S 5650 3750 550  400 
+S 5650 5500 550  400 
 U 5E834B5D
 F0 "RegisterC" 50
 F1 "Register.sch" 50
-F2 "IN" I L 5650 3950 50 
-F3 "~OUT" I L 5650 4050 50 
-F4 "DATA_BUS" T L 5650 3850 50 
+F2 "IN" I L 5650 5700 50 
+F3 "~OUT" I L 5650 5800 50 
+F4 "DATA_BUS" T L 5650 5600 50 
 $EndSheet
 $Sheet
-S 5650 4500 550  400 
+S 5650 6250 550  400 
 U 5E834B62
 F0 "RegisterD" 50
 F1 "Register.sch" 50
-F2 "IN" I L 5650 4700 50 
-F3 "~OUT" I L 5650 4800 50 
-F4 "DATA_BUS" T L 5650 4600 50 
+F2 "IN" I L 5650 6450 50 
+F3 "~OUT" I L 5650 6550 50 
+F4 "DATA_BUS" T L 5650 6350 50 
 $EndSheet
 Wire Bus Line
-	5100 5750 4700 5750
-Connection ~ 4700 5750
+	5650 6350 4700 6350
 Wire Bus Line
-	5650 4600 4700 4600
-Connection ~ 4700 4600
+	5650 5600 4700 5600
 Wire Bus Line
-	5650 3850 4700 3850
-Connection ~ 4700 3850
+	5650 4850 4700 4850
 Wire Bus Line
-	5650 3100 4700 3100
-Connection ~ 4700 3100
-Wire Bus Line
-	5650 2350 4700 2350
+	5650 4100 4700 4100
 Connection ~ 4700 2350
-Wire Bus Line
-	4700 2350 4700 3100
 Wire Bus Line
 	4100 2350 4700 2350
 Text Label 4700 2350 2    50   ~ 0
@@ -82,7 +74,6 @@ F3 "ZERO_FLAG" I L 5050 7050 50
 F4 "CARRY_FLAG" I L 5050 7150 50 
 F5 "NEGATIVE_FLAG" I L 5050 7250 50 
 F6 "OVERFLOW_FLAG" I L 5050 7350 50 
-F7 "T0" O R 6200 7200 50 
 $EndSheet
 Wire Bus Line
 	4100 6600 4700 6600
@@ -141,12 +132,6 @@ F4 "Z_BUS" O L 3200 7200 50
 F5 "CLEAR" I L 3200 7450 50 
 $EndSheet
 Wire Bus Line
-	4700 4600 4700 5550
-Wire Bus Line
-	4700 3850 4700 4450
-Wire Bus Line
-	4700 3100 4700 3400
-Wire Bus Line
 	4100 3400 4700 3400
 $Sheet
 S 3000 3300 1100 750 
@@ -191,8 +176,6 @@ F6 "~OUT_ADDRESS" I L 3000 6100 50
 F7 "~COUNT_DOWN" I L 3000 5800 50 
 F8 "~COUNT_UP" I L 3000 5700 50 
 $EndSheet
-Wire Bus Line
-	4700 5750 4700 6600
 Connection ~ 4700 6600
 Wire Bus Line
 	4700 6600 4700 7200
@@ -202,21 +185,21 @@ Wire Bus Line
 Connection ~ 4700 7900
 Wire Bus Line
 	4700 7900 4700 8250
-Text GLabel 5650 2450 0    50   Input ~ 0
+Text GLabel 5650 4200 0    50   Input ~ 0
 RegisterA_IN
-Text GLabel 5650 2550 0    50   Input ~ 0
+Text GLabel 5650 4300 0    50   Input ~ 0
 ~RegisterA_OUT
-Text GLabel 5650 3200 0    50   Input ~ 0
+Text GLabel 5650 4950 0    50   Input ~ 0
 RegisterB_IN
-Text GLabel 5650 3300 0    50   Input ~ 0
+Text GLabel 5650 5050 0    50   Input ~ 0
 ~RegisterB_OUT
-Text GLabel 5650 3950 0    50   Input ~ 0
+Text GLabel 5650 5700 0    50   Input ~ 0
 RegisterC_IN
-Text GLabel 5650 4050 0    50   Input ~ 0
+Text GLabel 5650 5800 0    50   Input ~ 0
 ~RegisterC_OUT
-Text GLabel 5650 4700 0    50   Input ~ 0
+Text GLabel 5650 6450 0    50   Input ~ 0
 RegisterD_IN
-Text GLabel 5650 4800 0    50   Input ~ 0
+Text GLabel 5650 6550 0    50   Input ~ 0
 ~RegisterD_OUT
 Text GLabel 3000 2500 0    50   Input ~ 0
 ~ProgramCounter_COUNT_UP
@@ -295,7 +278,7 @@ Text GLabel 3200 8650 0    50   Input ~ 0
 ALU_F4
 Text GLabel 3200 9050 0    50   Input ~ 0
 ~ALU_OUT
-Text GLabel 5100 5850 0    50   Input ~ 0
+Text GLabel 5700 3250 0    50   Input ~ 0
 InstructionRegister_IN
 Text GLabel 5650 8600 0    50   Input ~ 0
 ~FlagsRegister_OUT
@@ -454,38 +437,32 @@ Wire Wire Line
 Wire Wire Line
 	1500 3900 700  3900
 Connection ~ 4700 3400
-Wire Bus Line
-	4700 3400 4700 3850
 Connection ~ 4700 4450
-Wire Bus Line
-	4700 4450 4700 4600
 Connection ~ 4700 5550
-Wire Bus Line
-	4700 5550 4700 5750
 $Sheet
-S 6500 1600 700  1700
+S 6500 1200 700  1700
 U 5EA86881
 F0 "DataBuffer" 50
 F1 "DataBuffer.sch" 50
-F2 "DATA_BUS" T L 6500 1700 50 
-F3 "D0" T R 7200 1700 50 
-F4 "D1" T R 7200 1800 50 
-F5 "D2" T R 7200 1900 50 
-F6 "D3" T R 7200 2000 50 
-F7 "D4" T R 7200 2100 50 
-F8 "D5" T R 7200 2200 50 
-F9 "D6" T R 7200 2300 50 
-F10 "D7" T R 7200 2400 50 
-F11 "D8" T R 7200 2500 50 
-F12 "D9" T R 7200 2600 50 
-F13 "D10" T R 7200 2700 50 
-F14 "D11" T R 7200 2800 50 
-F15 "D12" T R 7200 2900 50 
-F16 "D13" T R 7200 3000 50 
-F17 "D14" T R 7200 3100 50 
-F18 "D15" T R 7200 3200 50 
-F19 "IN" I L 6500 1850 50 
-F20 "~OUT" I L 6500 1950 50 
+F2 "DATA_BUS" T L 6500 1300 50 
+F3 "D0" T R 7200 1300 50 
+F4 "D1" T R 7200 1400 50 
+F5 "D2" T R 7200 1500 50 
+F6 "D3" T R 7200 1600 50 
+F7 "D4" T R 7200 1700 50 
+F8 "D5" T R 7200 1800 50 
+F9 "D6" T R 7200 1900 50 
+F10 "D7" T R 7200 2000 50 
+F11 "D8" T R 7200 2100 50 
+F12 "D9" T R 7200 2200 50 
+F13 "D10" T R 7200 2300 50 
+F14 "D11" T R 7200 2400 50 
+F15 "D12" T R 7200 2500 50 
+F16 "D13" T R 7200 2600 50 
+F17 "D14" T R 7200 2700 50 
+F18 "D15" T R 7200 2800 50 
+F19 "IN" I L 6500 1450 50 
+F20 "~OUT" I L 6500 1550 50 
 $EndSheet
 Wire Bus Line
 	4700 8250 5650 8250
@@ -509,46 +486,44 @@ Wire Wire Line
 	3200 8800 2700 8800
 Wire Wire Line
 	7350 8350 7250 8350
-Text HLabel 7200 1700 2    50   3State ~ 0
+Text HLabel 7200 1300 2    50   3State ~ 0
 D0
-Text HLabel 7200 1800 2    50   3State ~ 0
+Text HLabel 7200 1400 2    50   3State ~ 0
 D1
-Text HLabel 7200 1900 2    50   3State ~ 0
+Text HLabel 7200 1500 2    50   3State ~ 0
 D2
-Text HLabel 7200 2000 2    50   3State ~ 0
+Text HLabel 7200 1600 2    50   3State ~ 0
 D3
-Text HLabel 7200 2100 2    50   3State ~ 0
+Text HLabel 7200 1700 2    50   3State ~ 0
 D4
-Text HLabel 7200 2200 2    50   3State ~ 0
+Text HLabel 7200 1800 2    50   3State ~ 0
 D5
-Text HLabel 7200 2300 2    50   3State ~ 0
+Text HLabel 7200 1900 2    50   3State ~ 0
 D6
-Text HLabel 7200 2400 2    50   3State ~ 0
+Text HLabel 7200 2000 2    50   3State ~ 0
 D7
-Text HLabel 7200 2500 2    50   3State ~ 0
+Text HLabel 7200 2100 2    50   3State ~ 0
 D8
-Text HLabel 7200 2600 2    50   3State ~ 0
+Text HLabel 7200 2200 2    50   3State ~ 0
 D9
-Text HLabel 7200 2700 2    50   3State ~ 0
+Text HLabel 7200 2300 2    50   3State ~ 0
 D10
-Text HLabel 7200 2800 2    50   3State ~ 0
+Text HLabel 7200 2400 2    50   3State ~ 0
 D11
-Text HLabel 7200 2900 2    50   3State ~ 0
+Text HLabel 7200 2500 2    50   3State ~ 0
 D12
-Text HLabel 7200 3000 2    50   3State ~ 0
+Text HLabel 7200 2600 2    50   3State ~ 0
 D13
-Text HLabel 7200 3100 2    50   3State ~ 0
+Text HLabel 7200 2700 2    50   3State ~ 0
 D14
-Text HLabel 7200 3200 2    50   3State ~ 0
+Text HLabel 7200 2800 2    50   3State ~ 0
 D15
-Text GLabel 6350 1850 0    50   Input ~ 0
+Text GLabel 5450 1450 0    50   Input ~ 0
 DataBuffer_IN
-Text GLabel 6350 1950 0    50   Input ~ 0
+Text GLabel 5450 1550 0    50   Input ~ 0
 ~DataBuffer_OUT
 Wire Bus Line
-	4700 1700 6500 1700
-Wire Bus Line
-	4700 1700 4700 2350
+	4700 1300 6500 1300
 $Sheet
 S 2900 1450 1200 600 
 U 5EB93191
@@ -567,31 +542,17 @@ Wire Bus Line
 	2900 1550 1600 1550
 Wire Bus Line
 	4100 1550 4700 1550
-Wire Bus Line
-	4700 1550 4700 1700
-Connection ~ 4700 1700
-Text HLabel 7200 1250 2    50   Output ~ 0
+Text HLabel 7200 850  2    50   Output ~ 0
 ~W
-Text HLabel 6600 1350 2    50   Output ~ 0
+Text HLabel 6250 2100 2    50   Output ~ 0
 ~R
 Wire Wire Line
-	6350 1850 6400 1850
+	6400 1450 6400 850 
 Wire Wire Line
-	6350 1950 6450 1950
+	6400 850  6600 850 
+Connection ~ 6400 1450
 Wire Wire Line
-	6450 1950 6450 1350
-Wire Wire Line
-	6450 1350 6600 1350
-Connection ~ 6450 1950
-Wire Wire Line
-	6450 1950 6500 1950
-Wire Wire Line
-	6400 1850 6400 1250
-Wire Wire Line
-	6400 1250 6600 1250
-Connection ~ 6400 1850
-Wire Wire Line
-	6400 1850 6500 1850
+	6400 1450 6500 1450
 Wire Wire Line
 	5050 7350 5000 7350
 Wire Wire Line
@@ -700,12 +661,12 @@ Wire Wire Line
 $Comp
 L 74xx:74LS04 U?
 U 3 1 5F2108AC
-P 6900 1250
-F 0 "U?" H 6900 1567 50  0000 C CNN
-F 1 "74LS04" H 6900 1476 50  0000 C CNN
-F 2 "" H 6900 1250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6900 1250 50  0001 C CNN
-	3    6900 1250
+P 6900 850
+F 0 "U?" H 6900 1167 50  0000 C CNN
+F 1 "74LS04" H 6900 1076 50  0000 C CNN
+F 2 "" H 6900 850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6900 850 50  0001 C CNN
+	3    6900 850 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -730,92 +691,43 @@ Text GLabel 5650 9350 0    50   Input ~ 0
 FlagRegister_A1
 Text GLabel 5650 9450 0    50   Input ~ 0
 FlagRegister_A2
-$Comp
-L 74xx:74LS74 U?
-U 1 1 6004CDBE
-P 7000 6950
-F 0 "U?" H 7000 7431 50  0000 C CNN
-F 1 "74LS74" H 7000 7340 50  0000 C CNN
-F 2 "" H 7000 6950 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 7000 6950 50  0001 C CNN
-	1    7000 6950
-	1    0    0    -1  
-$EndComp
-Text HLabel 6700 6950 0    50   Input ~ 0
+Text HLabel 5550 3450 0    50   Input ~ 0
 IRQ
-$Comp
-L power:+5V #PWR?
-U 1 1 60051B4B
-P 6700 6850
-F 0 "#PWR?" H 6700 6700 50  0001 C CNN
-F 1 "+5V" V 6715 6978 50  0000 L CNN
-F 2 "" H 6700 6850 50  0001 C CNN
-F 3 "" H 6700 6850 50  0001 C CNN
-	1    6700 6850
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7250 8650 7650 8650
 Wire Wire Line
 	7650 8650 7650 7550
-Wire Wire Line
-	7650 7550 7000 7550
-Wire Wire Line
-	7000 7550 7000 7250
-$Comp
-L power:+5V #PWR?
-U 1 1 60127B77
-P 7000 6650
-F 0 "#PWR?" H 7000 6500 50  0001 C CNN
-F 1 "+5V" H 7015 6823 50  0000 C CNN
-F 2 "" H 7000 6650 50  0001 C CNN
-F 3 "" H 7000 6650 50  0001 C CNN
-	1    7000 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 U?
-U 2 1 607C023F
-P 7400 6550
-F 0 "U?" V 7446 6370 50  0000 R CNN
-F 1 "74LS08" V 7355 6370 50  0000 R CNN
-F 2 "" H 7400 6550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 7400 6550 50  0001 C CNN
-	2    7400 6550
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6200 7200 6550 7200
-Wire Wire Line
-	6550 7200 6550 7350
-Wire Wire Line
-	6550 7350 7500 7350
-Wire Wire Line
-	7500 7350 7500 6850
 $Sheet
-S 5100 5650 1250 300 
+S 6500 3150 950  1700
 U 5E834B67
 F0 "InstructionRegister" 50
 F1 "InstructionRegister.sch" 50
-F2 "IN" I L 5100 5850 50 
-F3 "DATA_BUS" I L 5100 5750 50 
-F4 "INSTRUCTION" O R 6350 5750 50 
-F5 "SELECT_INT_INST" I R 6350 5850 50 
+F2 "IN" I L 6500 3250 50 
+F3 "INSTRUCTION" O L 6500 3450 50 
+F4 "SELECT_INT_INST" I L 6500 3350 50 
+F5 "D0" I R 7450 3250 50 
+F6 "D1" I R 7450 3350 50 
+F7 "D2" I R 7450 3450 50 
+F8 "D3" I R 7450 3550 50 
+F9 "D4" I R 7450 3650 50 
+F10 "D5" I R 7450 3750 50 
+F11 "D6" I R 7450 3850 50 
+F12 "D7" I R 7450 3950 50 
+F13 "D8" I R 7450 4050 50 
+F14 "D9" I R 7450 4150 50 
+F15 "D10" I R 7450 4250 50 
+F16 "D11" I R 7450 4350 50 
+F17 "D12" I R 7450 4450 50 
+F18 "D13" I R 7450 4550 50 
+F19 "D14" I R 7450 4650 50 
+F20 "D15" I R 7450 4750 50 
 $EndSheet
-Wire Bus Line
-	6350 5750 6400 5750
-Wire Bus Line
-	6400 5750 6400 7050
-Wire Bus Line
-	6200 7050 6400 7050
-Wire Wire Line
-	6350 5850 7400 5850
 $Sheet
-S 4850 1000 550  200 
+S 4000 1000 550  200 
 U 60996BF7
 F0 "DATA_BUS_LEDS_PULLDOWNS" 50
 F1 "DATA_BUS_LEDS_PULLDOWNS.sch" 50
-F2 "DATA_BUS" T L 4850 1100 50 
+F2 "DATA_BUS" T R 4550 1100 50 
 $EndSheet
 $Sheet
 S 1900 1000 650  200 
@@ -830,9 +742,7 @@ Connection ~ 1600 1550
 Wire Bus Line
 	1600 1100 1900 1100
 Wire Bus Line
-	4850 1100 4700 1100
-Wire Bus Line
-	4700 1100 4700 1550
+	4700 1100 4700 1300
 Connection ~ 4700 1550
 $Sheet
 S 3000 2250 1100 750 
@@ -856,10 +766,149 @@ Wire Wire Line
 Connection ~ 1650 10450
 Wire Wire Line
 	1650 10450 1750 10450
+Wire Bus Line
+	4700 5550 4700 5600
+Text HLabel 7450 3250 2    50   3State ~ 0
+D0
+Text HLabel 7450 3350 2    50   3State ~ 0
+D1
+Text HLabel 7450 3450 2    50   3State ~ 0
+D2
+Text HLabel 7450 3550 2    50   3State ~ 0
+D3
+Text HLabel 7450 3650 2    50   3State ~ 0
+D4
+Text HLabel 7450 3750 2    50   3State ~ 0
+D5
+Text HLabel 7450 3850 2    50   3State ~ 0
+D6
+Text HLabel 7450 3950 2    50   3State ~ 0
+D7
+Text HLabel 7450 4050 2    50   3State ~ 0
+D8
+Text HLabel 7450 4150 2    50   3State ~ 0
+D9
+Text HLabel 7450 4250 2    50   3State ~ 0
+D10
+Text HLabel 7450 4350 2    50   3State ~ 0
+D11
+Text HLabel 7450 4450 2    50   3State ~ 0
+D12
+Text HLabel 7450 4550 2    50   3State ~ 0
+D13
+Text HLabel 7450 4650 2    50   3State ~ 0
+D14
+Text HLabel 7450 4750 2    50   3State ~ 0
+D15
+Wire Bus Line
+	4550 1100 4700 1100
+Connection ~ 4700 4100
+Wire Bus Line
+	4700 4100 4700 4450
+Connection ~ 4700 4850
+Wire Bus Line
+	4700 4850 4700 5550
+Connection ~ 4700 5600
+Wire Bus Line
+	4700 5600 4700 6350
+Connection ~ 4700 6350
+Wire Bus Line
+	4700 6350 4700 6600
+Wire Bus Line
+	4700 2350 4700 3400
+Wire Bus Line
+	4700 4450 4700 4850
+Wire Bus Line
+	4700 3400 4700 4100
+Connection ~ 4700 1300
+Wire Bus Line
+	4700 1300 4700 1550
+Wire Bus Line
+	4700 1550 4700 2350
+$Comp
+L 74xx:74LS04 U?
+U 1 1 612083D0
+P 6000 2800
+F 0 "U?" V 6046 2620 50  0000 R CNN
+F 1 "74LS04" V 5955 2620 50  0000 R CNN
+F 2 "" H 6000 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6000 2800 50  0001 C CNN
+	1    6000 2800
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	7400 5850 7400 6250
+	5700 3250 6000 3250
+Wire Wire Line
+	6000 3100 6000 3250
+Connection ~ 6000 3250
+Wire Wire Line
+	6000 3250 6500 3250
+$Comp
+L 74xx:74LS08 U?
+U 1 1 6121832D
+P 5950 2100
+F 0 "U?" H 5950 2425 50  0000 C CNN
+F 1 "74LS08" H 5950 2334 50  0000 C CNN
+F 2 "" H 5950 2100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5950 2100 50  0001 C CNN
+	1    5950 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2500 5650 2500
+Wire Wire Line
+	5650 2500 5650 2350
+Wire Wire Line
+	5450 1550 5650 1550
+Wire Wire Line
+	5650 2000 5650 1550
+Connection ~ 5650 1550
+Wire Wire Line
+	5650 1550 6500 1550
+Wire Wire Line
+	5450 1450 6400 1450
+Text HLabel 6250 2350 2    50   Output ~ 0
+~I
+Wire Wire Line
+	6250 2350 5650 2350
+Connection ~ 5650 2350
+Wire Wire Line
+	5650 2350 5650 2200
+$Comp
+L 74xx:74LS08 U?
+U 1 1 6123483C
+P 5850 3550
+F 0 "U?" H 5850 3875 50  0000 C CNN
+F 1 "74LS08" H 5850 3784 50  0000 C CNN
+F 2 "" H 5850 3550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 5850 3550 50  0001 C CNN
+	1    5850 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3550 6200 3550
+Wire Wire Line
+	6200 3550 6200 3350
+Wire Wire Line
+	6200 3350 6500 3350
+Wire Wire Line
+	5550 3650 5450 3650
+Wire Wire Line
+	5450 3650 5450 3750
+Wire Wire Line
+	5450 3750 6400 3750
+Wire Wire Line
+	6400 3750 6400 7550
+Wire Wire Line
+	6400 7550 7650 7550
+Wire Bus Line
+	6500 3450 6350 3450
+Wire Bus Line
+	6350 3450 6350 7050
 Wire Bus Line
 	1600 1550 1600 2350
+Wire Bus Line
+	6200 7050 6350 7050
 Wire Bus Line
 	1600 3400 1600 4450
 Wire Bus Line

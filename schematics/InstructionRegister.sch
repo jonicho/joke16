@@ -49,72 +49,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 4200 4800 50  0001 C CNN
 	1    4200 4800
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	1200 850  1350 850 
-Entry Wire Line
-	1350 1350 1450 1450
-Entry Wire Line
-	1350 1650 1450 1750
-Entry Wire Line
-	1350 1950 1450 2050
-Entry Wire Line
-	1350 2250 1450 2350
-Entry Wire Line
-	1350 2550 1450 2650
-Entry Wire Line
-	1350 2850 1450 2950
-Entry Wire Line
-	1350 3150 1450 3250
-Entry Wire Line
-	1350 3450 1450 3550
-Entry Wire Line
-	1350 3750 1450 3850
-Wire Wire Line
-	2350 3850 1450 3850
-Wire Wire Line
-	2350 4150 1450 4150
-Wire Wire Line
-	2350 4450 1450 4450
-Wire Wire Line
-	2350 4750 1450 4750
-Wire Wire Line
-	2350 5050 1450 5050
-Wire Wire Line
-	2350 5350 1450 5350
-Wire Wire Line
-	2350 5650 1450 5650
-Wire Wire Line
-	2350 5950 1450 5950
-Entry Wire Line
-	1350 4050 1450 4150
-Entry Wire Line
-	1350 4350 1450 4450
-Entry Wire Line
-	1350 4650 1450 4750
-Entry Wire Line
-	1350 4950 1450 5050
-Entry Wire Line
-	1350 5250 1450 5350
-Entry Wire Line
-	1350 5550 1450 5650
-Entry Wire Line
-	1350 5850 1450 5950
-Text Label 1700 3850 0    50   ~ 0
-DATA_BUS_8
-Text Label 1700 4150 0    50   ~ 0
-DATA_BUS_9
-Text Label 1700 4450 0    50   ~ 0
-DATA_BUS_10
-Text Label 1700 4750 0    50   ~ 0
-DATA_BUS_11
-Text Label 1700 5050 0    50   ~ 0
-DATA_BUS_12
-Text Label 1700 5350 0    50   ~ 0
-DATA_BUS_13
-Text Label 1700 5650 0    50   ~ 0
-DATA_BUS_14
-Text Label 1700 5950 0    50   ~ 0
-DATA_BUS_15
 $Comp
 L 74xx:74LS08 U?
 U 1 1 5E826C35
@@ -170,38 +104,6 @@ Wire Wire Line
 	4200 1400 4200 1750
 Wire Wire Line
 	4200 5600 4200 5750
-Text Label 1700 3550 0    50   ~ 0
-DATA_BUS_7
-Text Label 1700 3250 0    50   ~ 0
-DATA_BUS_6
-Text Label 1700 2950 0    50   ~ 0
-DATA_BUS_5
-Text Label 1700 2650 0    50   ~ 0
-DATA_BUS_4
-Text Label 1700 2350 0    50   ~ 0
-DATA_BUS_3
-Text Label 1700 2050 0    50   ~ 0
-DATA_BUS_2
-Text Label 1700 1750 0    50   ~ 0
-DATA_BUS_1
-Text Label 1700 1450 0    50   ~ 0
-DATA_BUS_0
-Wire Wire Line
-	2350 3550 1450 3550
-Wire Wire Line
-	2350 3250 1450 3250
-Wire Wire Line
-	2350 2950 1450 2950
-Wire Wire Line
-	2350 2650 1450 2650
-Wire Wire Line
-	2350 2350 1450 2350
-Wire Wire Line
-	2350 2050 1450 2050
-Wire Wire Line
-	2350 1750 1450 1750
-Wire Wire Line
-	2350 1450 1450 1450
 Wire Wire Line
 	4200 4000 4750 4000
 Wire Wire Line
@@ -226,8 +128,6 @@ Text GLabel 3700 3350 0    50   Input ~ 0
 ~RST
 Text GLabel 3700 5300 0    50   Input ~ 0
 ~RST
-Text HLabel 1200 850  0    50   Input ~ 0
-DATA_BUS
 $Comp
 L LED:HDSP-4830_2 BAR?
 U 1 1 5E95097B
@@ -926,8 +826,70 @@ Wire Wire Line
 	2300 1150 2200 1150
 Wire Wire Line
 	2300 1150 2300 1650
+Text HLabel 2250 1450 0    50   Input ~ 0
+D0
+Wire Wire Line
+	2250 1450 2350 1450
+Text HLabel 2250 1750 0    50   Input ~ 0
+D1
+Wire Wire Line
+	2250 1750 2350 1750
+Text HLabel 2250 2050 0    50   Input ~ 0
+D2
+Wire Wire Line
+	2250 2050 2350 2050
+Text HLabel 2250 2350 0    50   Input ~ 0
+D3
+Wire Wire Line
+	2250 2350 2350 2350
+Text HLabel 2250 2650 0    50   Input ~ 0
+D4
+Wire Wire Line
+	2250 2650 2350 2650
+Text HLabel 2250 2950 0    50   Input ~ 0
+D5
+Wire Wire Line
+	2250 2950 2350 2950
+Text HLabel 2250 3250 0    50   Input ~ 0
+D6
+Wire Wire Line
+	2250 3250 2350 3250
+Text HLabel 2250 3550 0    50   Input ~ 0
+D7
+Wire Wire Line
+	2250 3550 2350 3550
+Text HLabel 2250 3850 0    50   Input ~ 0
+D8
+Wire Wire Line
+	2250 3850 2350 3850
+Text HLabel 2250 4150 0    50   Input ~ 0
+D9
+Wire Wire Line
+	2250 4150 2350 4150
+Text HLabel 2250 4450 0    50   Input ~ 0
+D10
+Wire Wire Line
+	2250 4450 2350 4450
+Text HLabel 2250 4750 0    50   Input ~ 0
+D11
+Wire Wire Line
+	2250 4750 2350 4750
+Text HLabel 2250 5050 0    50   Input ~ 0
+D12
+Wire Wire Line
+	2250 5050 2350 5050
+Text HLabel 2250 5350 0    50   Input ~ 0
+D13
+Wire Wire Line
+	2250 5350 2350 5350
+Text HLabel 2250 5650 0    50   Input ~ 0
+D14
+Wire Wire Line
+	2250 5650 2350 5650
+Text HLabel 2250 5950 0    50   Input ~ 0
+D15
+Wire Wire Line
+	2250 5950 2350 5950
 Wire Bus Line
 	6450 1800 6450 4900
-Wire Bus Line
-	1350 850  1350 5850
 $EndSCHEMATC
