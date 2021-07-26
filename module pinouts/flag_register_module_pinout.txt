@@ -1,0 +1,13 @@
+ FlagRegister_IN  1 | |  2  FlagRegister_SELECT_BUS_~FLAGS
+FlagRegister_OUT  3 | |  4  N.C.
+ FlagRegister_A0  5 | |  6  FlagRegister_A1
+ FlagRegister_A2  7 | |  8  N.C.
+FlagRegister_SET  9 | | 10 FlagRegister_RESET
+            N.C. 11 | | 12 N.C.
+        CARRY_IN 13 | | 14 OVERFLOW_IN
+            N.C. 15 | | 16 N.C.
+
+            ZERO_OUT  1 | |  2 CARRY_OUT
+        NEGATIVE_OUT  3 | |  4 OVERFLOW_OUT
+INTERRUPT_ENABLE_OUT  5 | |  6 N.C.
+                N.C.  7 | |  8 N.C.
