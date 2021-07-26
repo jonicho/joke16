@@ -468,21 +468,6 @@ F 3 "" H 3000 4650 50  0001 C CNN
 	1    3000 4650
 	0    1    1    0   
 $EndComp
-Text HLabel 900  2300 0    50   Input ~ 0
-IN
-Text HLabel 800  2500 0    50   Input ~ 0
-~OUT
-$Comp
-L 74xx:74LS86 U?
-U 1 1 60BED415
-P 1200 2400
-F 0 "U?" H 1200 2725 50  0000 C CNN
-F 1 "74LS86" H 1200 2634 50  0000 C CNN
-F 2 "" H 1200 2400 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 1200 2400 50  0001 C CNN
-	1    1200 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2500 2400 1600 2400
 Wire Wire Line
@@ -493,23 +478,9 @@ Connection ~ 1600 2400
 Wire Wire Line
 	1600 2400 1500 2400
 Wire Wire Line
-	800  2500 850  2500
-Wire Wire Line
-	850  2500 850  2650
-Wire Wire Line
-	850  2650 1550 2650
-Wire Wire Line
-	1550 2650 1550 2300
-Wire Wire Line
 	1550 2300 2500 2300
-Connection ~ 850  2500
-Wire Wire Line
-	850  2500 900  2500
 Wire Wire Line
 	2500 4250 1550 4250
-Wire Wire Line
-	1550 4250 1550 2650
-Connection ~ 1550 2650
 Text HLabel 7950 1400 2    50   3State ~ 0
 D0
 Text HLabel 7950 1500 2    50   3State ~ 0
@@ -823,6 +794,15 @@ Wire Wire Line
 	4050 3950 7000 3950
 Wire Wire Line
 	4000 4050 6950 4050
+Wire Wire Line
+	1550 2300 1550 4250
+Text HLabel 1500 2400 0    50   Input ~ 0
+~ENABLE
+Text HLabel 1500 2300 0    50   Input ~ 0
+DIR
+Wire Wire Line
+	1500 2300 1550 2300
+Connection ~ 1550 2300
 Wire Bus Line
 	1700 1050 1700 3950
 $EndSCHEMATC

@@ -101,14 +101,6 @@ F 3 "" H 6250 4600 50  0001 C CNN
 	1    6250 4600
 	0    1    1    0   
 $EndComp
-Text HLabel 3350 4300 0    50   Input ~ 0
-OVERFLOW_FLAG
-Text HLabel 3350 4200 0    50   Input ~ 0
-NEGATIVE_FLAG
-Text HLabel 3350 4100 0    50   Input ~ 0
-CARRY_FLAG
-Text HLabel 3350 4000 0    50   Input ~ 0
-ZERO_FLAG
 Wire Wire Line
 	5750 3950 5750 4000
 Connection ~ 5750 3950
@@ -550,8 +542,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS161" H 6250 3800 50  0001 C CNN
 	1    6250 3800
 	1    0    0    -1  
 $EndComp
-Text GLabel 13550 5900 2    50   Output ~ 0
-~DataBuffer_OUT
 Entry Wire Line
 	5900 6200 6000 6300
 Wire Wire Line
@@ -872,10 +862,6 @@ Wire Wire Line
 Wire Wire Line
 	13150 6050 13550 6050
 Wire Wire Line
-	13550 5900 13200 5900
-Wire Wire Line
-	13200 5900 13200 5550
-Wire Wire Line
 	13200 5550 12950 5550
 Wire Wire Line
 	13100 6200 13550 6200
@@ -911,8 +897,6 @@ Text GLabel 14500 2000 2    50   Output ~ 0
 RegisterZ_IN
 Text GLabel 14500 2300 2    50   Output ~ 0
 RegisterW_IN
-Text GLabel 14500 1400 2    50   Output ~ 0
-DataBuffer_IN
 Text GLabel 14500 1700 2    50   Output ~ 0
 AddressLatch_IN
 Text GLabel 7550 5000 2    50   Output ~ 0
@@ -1187,134 +1171,20 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS151" H 4100 4500 50  0001 C CNN
 	1    4100 4500
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS32 U?
-U 1 1 605DEE98
-P 2150 3600
-F 0 "U?" H 2150 3925 50  0000 C CNN
-F 1 "74LS32" H 2150 3834 50  0000 C CNN
-F 2 "" H 2150 3600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2150 3600 50  0001 C CNN
-	1    2150 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 U?
-U 1 1 605E2238
-P 1550 3500
-F 0 "U?" H 1550 3817 50  0000 C CNN
-F 1 "74LS04" H 1550 3726 50  0000 C CNN
-F 2 "" H 1550 3500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1550 3500 50  0001 C CNN
-	1    1550 3500
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 U?
-U 1 1 6062D5CF
-P 2150 4000
-F 0 "U?" H 2150 4325 50  0000 C CNN
-F 1 "74LS86" H 2150 4234 50  0000 C CNN
-F 2 "" H 2150 4000 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 2150 4000 50  0001 C CNN
-	1    2150 4000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS32 U?
-U 1 1 6062F278
-P 2150 4400
-F 0 "U?" H 2150 4725 50  0000 C CNN
-F 1 "74LS32" H 2150 4634 50  0000 C CNN
-F 2 "" H 2150 4400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2150 4400 50  0001 C CNN
-	1    2150 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 4000 2550 4000
-Wire Wire Line
-	2550 4000 2550 4200
-Wire Wire Line
-	2550 4200 1750 4200
-Wire Wire Line
-	1750 4200 1750 4300
-Wire Wire Line
-	1750 4300 1850 4300
-Wire Wire Line
-	1850 4500 1700 4500
-Wire Wire Line
-	1700 4500 1700 3700
-Wire Wire Line
-	1700 3700 1850 3700
-Wire Wire Line
-	1150 3100 1150 3500
-Wire Wire Line
-	1150 3500 1250 3500
-Wire Wire Line
-	1100 3050 1100 3700
-Wire Wire Line
-	1100 3700 1700 3700
-Connection ~ 1700 3700
-Wire Wire Line
-	3350 4000 3450 4000
-Wire Wire Line
-	3350 4100 3400 4100
-Wire Wire Line
-	3350 4200 3500 4200
-Wire Wire Line
-	3350 4300 3550 4300
-Wire Wire Line
-	2550 4200 2550 4500
-Wire Wire Line
-	2550 4500 3600 4500
-Connection ~ 2550 4200
-Wire Wire Line
-	2600 3600 2600 4400
-Wire Wire Line
-	2600 4400 3600 4400
-Wire Wire Line
-	2450 3600 2600 3600
-Wire Wire Line
-	2450 4400 2500 4400
-Wire Wire Line
-	2500 4400 2500 4600
-Wire Wire Line
-	2500 4600 3600 4600
-Wire Wire Line
-	1150 3100 3400 3100
 Wire Wire Line
 	3400 3100 3400 4100
-Connection ~ 3400 4100
 Wire Wire Line
 	3400 4100 3600 4100
 Wire Wire Line
 	3450 4000 3450 3050
 Wire Wire Line
-	3450 3050 1100 3050
-Connection ~ 3450 4000
-Wire Wire Line
 	3450 4000 3600 4000
 Wire Wire Line
 	3500 4200 3500 3000
 Wire Wire Line
-	3500 3000 1050 3000
-Wire Wire Line
-	1050 3000 1050 3900
-Wire Wire Line
-	1050 3900 1850 3900
-Connection ~ 3500 4200
-Wire Wire Line
 	3500 4200 3600 4200
 Wire Wire Line
 	3550 4300 3550 2950
-Wire Wire Line
-	3550 2950 1000 2950
-Wire Wire Line
-	1000 2950 1000 4100
-Wire Wire Line
-	1000 4100 1850 4100
-Connection ~ 3550 4300
 Wire Wire Line
 	3550 4300 3600 4300
 $Comp
@@ -1429,6 +1299,195 @@ Wire Wire Line
 Wire Bus Line
 	2500 5850 5900 5850
 Connection ~ 5900 5850
+$Comp
+L power:GND #PWR?
+U 1 1 605A32AB
+P 4100 5500
+F 0 "#PWR?" H 4100 5250 50  0001 C CNN
+F 1 "GND" H 4105 5327 50  0000 C CNN
+F 2 "" H 4100 5500 50  0001 C CNN
+F 3 "" H 4100 5500 50  0001 C CNN
+	1    4100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 605C8600
+P 3600 5200
+F 0 "#PWR?" H 3600 4950 50  0001 C CNN
+F 1 "GND" H 3605 5027 50  0000 C CNN
+F 2 "" H 3600 5200 50  0001 C CNN
+F 3 "" H 3600 5200 50  0001 C CNN
+	1    3600 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 606961A9
+P 1250 3600
+F 0 "#PWR?" H 1250 3450 50  0001 C CNN
+F 1 "+5V" H 1265 3773 50  0000 C CNN
+F 2 "" H 1250 3600 50  0001 C CNN
+F 3 "" H 1250 3600 50  0001 C CNN
+	1    1250 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 3400 1250 3400
+Wire Wire Line
+	1150 3100 1150 3400
+$Comp
+L 74xx:74LS86 U?
+U 1 1 6067B100
+P 1550 3500
+F 0 "U?" H 1550 3825 50  0000 C CNN
+F 1 "74LS86" H 1550 3734 50  0000 C CNN
+F 2 "" H 1550 3500 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 1550 3500 50  0001 C CNN
+	1    1550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 4100 1850 4100
+Wire Wire Line
+	1000 2950 1000 4100
+Wire Wire Line
+	1050 3900 1850 3900
+Wire Wire Line
+	1050 3000 1050 3900
+Wire Wire Line
+	2500 4400 2500 4600
+Wire Wire Line
+	2450 4400 2500 4400
+Wire Wire Line
+	2450 3600 2600 3600
+Wire Wire Line
+	2600 3600 2600 4400
+Connection ~ 2550 4200
+Wire Wire Line
+	2550 4200 2550 4500
+Connection ~ 1700 3700
+Wire Wire Line
+	1100 3700 1700 3700
+Wire Wire Line
+	1100 3050 1100 3700
+Wire Wire Line
+	1700 3700 1850 3700
+Wire Wire Line
+	1700 4500 1700 3700
+Wire Wire Line
+	1850 4500 1700 4500
+Wire Wire Line
+	1750 4300 1850 4300
+Wire Wire Line
+	1750 4200 1750 4300
+Wire Wire Line
+	2550 4200 1750 4200
+Wire Wire Line
+	2550 4000 2550 4200
+Wire Wire Line
+	2450 4000 2550 4000
+$Comp
+L 74xx:74LS32 U?
+U 1 1 6062F278
+P 2150 4400
+F 0 "U?" H 2150 4725 50  0000 C CNN
+F 1 "74LS32" H 2150 4634 50  0000 C CNN
+F 2 "" H 2150 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2150 4400 50  0001 C CNN
+	1    2150 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 U?
+U 1 1 6062D5CF
+P 2150 4000
+F 0 "U?" H 2150 4325 50  0000 C CNN
+F 1 "74LS86" H 2150 4234 50  0000 C CNN
+F 2 "" H 2150 4000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 2150 4000 50  0001 C CNN
+	1    2150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U?
+U 1 1 605DEE98
+P 2150 3600
+F 0 "U?" H 2150 3925 50  0000 C CNN
+F 1 "74LS32" H 2150 3834 50  0000 C CNN
+F 2 "" H 2150 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2150 3600 50  0001 C CNN
+	1    2150 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2950 1000 2950
+Wire Wire Line
+	3500 3000 1050 3000
+Wire Wire Line
+	3450 3050 1100 3050
+Wire Wire Line
+	1150 3100 3400 3100
+Wire Wire Line
+	2500 4600 3600 4600
+Wire Wire Line
+	2600 4400 3600 4400
+Wire Wire Line
+	2550 4500 3600 4500
+Connection ~ 3550 4300
+Wire Wire Line
+	3350 4300 3550 4300
+Connection ~ 3500 4200
+Wire Wire Line
+	3350 4200 3500 4200
+Connection ~ 3400 4100
+Wire Wire Line
+	3350 4100 3400 4100
+Connection ~ 3450 4000
+Wire Wire Line
+	3350 4000 3450 4000
+Text HLabel 3350 4000 0    50   Input ~ 0
+ZERO_FLAG
+Text HLabel 3350 4100 0    50   Input ~ 0
+CARRY_FLAG
+Text HLabel 3350 4200 0    50   Input ~ 0
+NEGATIVE_FLAG
+Text HLabel 3350 4300 0    50   Input ~ 0
+OVERFLOW_FLAG
+$Comp
+L 74xx:74LS86 U?
+U 1 1 60834FE3
+P 14800 5150
+F 0 "U?" H 14800 5475 50  0000 C CNN
+F 1 "74LS86" H 14800 5384 50  0000 C CNN
+F 2 "" H 14800 5150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 14800 5150 50  0001 C CNN
+	1    14800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14450 5050 14500 5050
+Text GLabel 15100 5150 2    50   Output ~ 0
+~DataBuffer_ENABLE
+Text GLabel 14600 5400 2    50   Output ~ 0
+DataBuffer_DIR
+Wire Wire Line
+	14600 5400 14500 5400
+Wire Wire Line
+	14500 5400 14500 5250
+Connection ~ 14500 5250
+Wire Wire Line
+	14500 1400 15600 1400
+Wire Wire Line
+	15600 1400 15600 4650
+Wire Wire Line
+	15600 4650 14450 4650
+Wire Wire Line
+	14450 4650 14450 5050
+Wire Wire Line
+	13200 5550 13200 5250
+Wire Wire Line
+	13200 5250 14500 5250
 Wire Bus Line
 	2500 4700 2500 5850
 Wire Bus Line

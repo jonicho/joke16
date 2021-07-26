@@ -1071,18 +1071,6 @@ Wire Wire Line
 Connection ~ 4750 8200
 Text Label 5200 8200 0    50   ~ 0
 IO
-Wire Bus Line
-	8700 550  8700 4550
-Wire Bus Line
-	5450 550  5450 4550
-Wire Bus Line
-	650  550  650  2400
-Wire Bus Line
-	3500 750  3500 5250
-Wire Bus Line
-	6750 750  6750 5250
-Wire Bus Line
-	1950 750  1950 8800
 $Sheet
 S 1050 900  550  2050
 U 5E82FA95
@@ -1127,4 +1115,16 @@ F37 "~R" O R 1600 2650 50
 F38 "IRQ" I L 1050 2850 50 
 F39 "~I" O R 1600 2850 50 
 $EndSheet
+Wire Bus Line
+	8700 550  8700 4550
+Wire Bus Line
+	5450 550  5450 4550
+Wire Bus Line
+	650  550  650  2400
+Wire Bus Line
+	3500 750  3500 5250
+Wire Bus Line
+	6750 750  6750 5250
+Wire Bus Line
+	1950 750  1950 8800
 $EndSCHEMATC
