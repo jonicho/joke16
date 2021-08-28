@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 8268 11693 portrait
 encoding utf-8
-Sheet 2 24
+Sheet 2 25
 Title ""
 Date ""
 Rev ""
@@ -521,23 +521,23 @@ D15
 Wire Bus Line
 	4700 1300 6500 1300
 $Sheet
-S 2900 1450 1200 600 
+S 2900 1600 1200 450 
 U 5EB93191
 F0 "AddressLatch" 50
 F1 "AddressLatch.sch" 50
-F2 "DATA_BUS" I R 4100 1550 50 
-F3 "IN" I L 2900 1800 50 
-F4 "ADDRESS_BUS" T L 2900 1550 50 
-F5 "~OUT_ADDRESS" I L 2900 1700 50 
+F2 "DATA_BUS" I R 4100 1700 50 
+F3 "IN" I L 2900 1950 50 
+F4 "ADDRESS_BUS" T L 2900 1700 50 
+F5 "~OUT_ADDRESS" I L 2900 1850 50 
 $EndSheet
-Text GLabel 2900 1700 0    50   Input ~ 0
+Text GLabel 2900 1850 0    50   Input ~ 0
 ~AddressLatch_OUT_ADDRESS
-Text GLabel 2900 1800 0    50   Input ~ 0
+Text GLabel 2900 1950 0    50   Input ~ 0
 AddressLatch_IN
 Wire Bus Line
-	2900 1550 1600 1550
+	2900 1700 1600 1700
 Wire Bus Line
-	4100 1550 4700 1550
+	4100 1700 4700 1700
 Text HLabel 7400 850  2    50   Output ~ 0
 ~W
 Text HLabel 6250 2500 2    50   Output ~ 0
@@ -692,27 +692,12 @@ F19 "D14" I R 7450 4650 50
 F20 "D15" I R 7450 4750 50 
 $EndSheet
 $Sheet
-S 4000 1000 550  200 
+S 4850 800  550  200 
 U 60996BF7
 F0 "DATA_BUS_LEDS_PULLDOWNS" 50
 F1 "DATA_BUS_LEDS_PULLDOWNS.sch" 50
-F2 "DATA_BUS" T R 4550 1100 50 
+F2 "DATA_BUS" T L 4850 900 50 
 $EndSheet
-$Sheet
-S 1900 1000 650  200 
-U 60A197D9
-F0 "ADDRESS_BUS_LEDS_PULLDOWNS" 50
-F1 "ADDRESS_BUS_LEDS_PULLDOWNS.sch" 50
-F2 "ADDRESS_BUS" T L 1900 1100 50 
-$EndSheet
-Wire Bus Line
-	1600 1550 1600 1100
-Connection ~ 1600 1550
-Wire Bus Line
-	1600 1100 1900 1100
-Wire Bus Line
-	4700 1100 4700 1300
-Connection ~ 4700 1550
 $Sheet
 S 3000 2250 1100 750 
 U 5E834BA4
@@ -762,8 +747,6 @@ Text HLabel 7450 4650 2    50   3State ~ 0
 D14
 Text HLabel 7450 4750 2    50   3State ~ 0
 D15
-Wire Bus Line
-	4550 1100 4700 1100
 Connection ~ 4700 4100
 Wire Bus Line
 	4700 4100 4700 4450
@@ -783,10 +766,6 @@ Wire Bus Line
 Wire Bus Line
 	4700 3400 4700 4100
 Connection ~ 4700 1300
-Wire Bus Line
-	4700 1300 4700 1550
-Wire Bus Line
-	4700 1550 4700 2350
 $Comp
 L 74xx:74LS04 U?
 U 1 1 612083D0
@@ -962,8 +941,52 @@ Wire Wire Line
 Connection ~ 5600 1500
 Wire Wire Line
 	5600 1500 6500 1500
+$Sheet
+S 600  800  650  200 
+U 60A197D9
+F0 "ADDRESS_BUS_LEDS_PULLDOWNS" 50
+F1 "ADDRESS_BUS_LEDS_PULLDOWNS.sch" 50
+F2 "ADDRESS_BUS" T R 1250 900 50 
+$EndSheet
 Wire Bus Line
-	1600 1550 1600 2350
+	4850 900  4700 900 
+Wire Bus Line
+	1250 900  1600 900 
+Connection ~ 1600 1700
+Connection ~ 4700 1700
+Wire Bus Line
+	4700 1700 4700 2350
+Wire Bus Line
+	4700 1300 4700 1700
+$Sheet
+S 2900 800  1200 550 
+U 6132941C
+F0 "BasePointer" 50
+F1 "BasePointer.sch" 50
+F2 "DATA_BUS" I R 4100 900 50 
+F3 "~OUT_DATA" I L 2900 1150 50 
+F4 "IN" I L 2900 1050 50 
+F5 "~OUT_ADDRESS" I L 2900 1250 50 
+F6 "ADDRESS_BUS" T L 2900 900 50 
+$EndSheet
+Wire Bus Line
+	2900 900  1600 900 
+Wire Bus Line
+	4100 900  4700 900 
+Text GLabel 2900 1050 0    50   Input ~ 0
+BasePointer_IN
+Text GLabel 2900 1150 0    50   Input ~ 0
+~BasePointer_OUT_DATA
+Text GLabel 2900 1250 0    50   Input ~ 0
+~BasePointer_OUT_ADDRESS
+Connection ~ 1600 900 
+Wire Bus Line
+	1600 900  1600 1700
+Connection ~ 4700 900 
+Wire Bus Line
+	4700 900  4700 1300
+Wire Bus Line
+	1600 1700 1600 2350
 Wire Bus Line
 	1600 3400 1600 4450
 Wire Bus Line
