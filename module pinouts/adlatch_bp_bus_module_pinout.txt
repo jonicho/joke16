@@ -1,0 +1,4 @@
+       BasePointer_IN  1 | |  2 ~BasePointer_OUT_ADDRESS
+~BasePointer_OUT_DATA  3 | |  4 N.C.
+      AddressLatch_IN  5 | |  6 ~AddressLatch_OUT_ADDRESS
+                 N.C.  7 | |  8 N.C.

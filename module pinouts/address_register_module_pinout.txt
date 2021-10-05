@@ -7,7 +7,6 @@
       ~RegisterY_COUNT_UP 13 | | 14 ~RegisterY_IN
                      N.C. 15 | | 16 ~RegisterY_COUNT_DOWN
 
-
 ~ProgrammCounter_OUT_ADDRESS  1 | |  2 ~ProgrammCounter_OUT_DATA
    ~StackPointer_OUT_ADDRESS  3 | |  4 ~StackPointer_OUT_DATA
       ~RegisterX_OUT_ADDRESS  5 | |  6 ~RegisterX_OUT_DATA
