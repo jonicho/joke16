@@ -251,7 +251,6 @@ func main() {
 		}
 		if !bytes.Equal(oldMicrocodeBytes, newMicrocodeBytes[i][:]) {
 			changedMicrocodeFiles = append(changedMicrocodeFiles, i)
-			break
 		}
 	}
 	if len(changedMicrocodeFiles) == 0 {
